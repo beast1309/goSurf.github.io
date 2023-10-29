@@ -1,0 +1,276 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
+	height: 100%;
+	font-size: 16px;
+	background-color: #171919;
+	color: #fff;
+	text-transform: uppercase;
+	min-width: 320px;
+	overflow-x: hidden;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.subtitle-left {
+	font-size: 22px;
+	line-height: 32px;
+	letter-spacing: 7.33333px;
+	color: #FFFFFF;
+	opacity: 0.5;
+	padding-left: 103px;
+	position: relative;
+	display: inline-block;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 80px;
+		height: 1px;
+		background-color: #FFFFFF;
+		left: 0;
+		top: 50%;
+	}
+}
+
+.headline-left {
+	padding-left: 135px;
+
+	span {
+		font-size: 22px;
+		line-height: 32px;
+		letter-spacing: 7.33333px;
+		color: #FFFFFF;
+		opacity: 0.5;
+		padding-right: 103px;
+		position: relative;
+		display: inline-block;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 80px;
+			height: 1px;
+			background-color: #FFFFFF;
+			right: 0;
+			top: 50%;
+		}
+	}
+
+	h3 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 800;
+		font-size: 40px;
+		line-height: 86px;
+
+		img {
+			margin-left: 25px;
+		}
+	}
+}
+
+/* subtitle-left */
+
+.title {
+	padding-bottom: 100px;
+
+	span {
+		position: absolute;
+		margin-top: 190px;
+		font-weight: 800;
+		font-size: 200px;
+		color: rgba(#fff, .02);
+		transform: translateX(-50px);
+	}
+
+	h3 {
+		position: absolute;
+		margin: 170px auto auto 245px;
+		color: #fff;
+		font-size: 80px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 80px;
+			height: 1px;
+			background-color: $green;
+		}
+	}
+}
+
+.subtitle {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 150px;
+	padding-right: 70px;
+
+	span {
+		position: absolute;
+		margin-top: 150px;
+		font-weight: 400;
+		font-size: 22px;
+		letter-spacing: 7.33333px;
+		text-align: right;
+		color: rgba(#fff, .05);
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 11px;
+			right: 330px;
+			width: 80px;
+			height: 1px;
+			background-color: #FFFFFF;
+			opacity: 0.5;
+		}
+	}
+
+	h3 {
+		position: absolute;
+		padding-top: 10px;
+		margin: 170px auto auto 245px;
+		color: #fff;
+		font-weight: 800;
+		font-size: 40px;
+		text-align: right;
+	}
+}
+
+.descr {
+	display: inline-block;
+
+	&__head {
+		font-weight: 800;
+		font-size: 40px;
+		padding-right: 10px;
+
+		span {
+			font-weight: 100;
+		}
+	}
+}
+
+.btn {
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 36px;
+
+	span {
+		padding: 17px 57px 15px 17px;
+		background-color: $green;
+		display: inline-block;
+		margin-left: 19px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 1px;
+			background-color: #fff;
+			top: 50%;
+			left: -10px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 25px;
+			height: 21px;
+			background-image: url(../images/arrows-right.svg);
+			top: 50%;
+			right: 17px;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+
+
+.quantity {
+	display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.quantity input {
+	width: 45px;
+	height: 42px;
+	display: block;
+	border: none;
+	background-color: transparent;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 36px;
+	color: #fff;
+}
+
+.quantity input:focus {
+	outline: 0;
+}
+
+.quantity-nav {
+	float: left;
+	position: static;
+	height: 42px;
+}
+
+.quantity-button {
+	position: relative;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 45px;
+}
+
+.quantity-button.quantity-up {
+	position: absolute;
+	right: 20px;
+}
+
+.quantity-button.quantity-down {
+	position: absolute;
+	right: 50px;
+}
